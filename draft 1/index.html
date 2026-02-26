@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC National Security Hackathon 2026</title>
+  <meta name="description" content="The premier defense tech hackathon. April 17, 2026. Washington, DC. JHU x Georgetown x GW.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .countdown-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin: 2rem 0 3rem;
+      font-family: var(--font-mono);
+    }
+    .countdown-unit { text-align: center; }
+    .countdown-value {
+      display: block;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .countdown-label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.25rem;
+      display: block;
+    }
+    .countdown-sep {
+      font-size: 2rem;
+      color: var(--text-muted);
+      padding: 0 0.75rem;
+      line-height: 1;
+    }
+    .partners-strip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding: 2rem 0;
+      opacity: 0.5;
+      transition: opacity var(--transition-base);
+    }
+    .partners-strip:hover { opacity: 0.8; }
+    .partners-strip span {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .why-card .why-icon {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .why-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .why-card p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="page-loader">
+  <div class="loader-bar"></div>
+</div>
+
+<!-- Background effects -->
+<canvas id="particles-canvas"></canvas>
+<div class="grid-bg"></div>
+<div class="scan-line"></div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">NS</div>
+    <span>NatSec Hack</span>
+  </a>
+  <div class="nav-toggle">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="#register" class="nav-cta">Register</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="corner-frame"></div>
+  <div class="hero-overline">April 17, 2026 &mdash; Washington, DC</div>
+  <h1 class="hero-title">
+    <span class="glitch" data-text="National Security">National Security</span><br>
+    <span class="highlight">Hackathon</span>
+  </h1>
+  <p class="hero-sub">
+    The DC area's premier defense technology hackathon.
+    Students from JHU, Georgetown, and GW come together to build
+    solutions for tomorrow's national security challenges.
+  </p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="icon">&#9670;</span> Washington, DC
+    </div>
+    <div class="hero-meta-item">
+      <span class="icon">&#9670;</span> April 17, 2026
+    </div>
+    <div class="hero-meta-item">
+      <span class="icon">&#9670;</span> 24 Hours
+    </div>
+  </div>
+  <div class="hero-actions">
+    <a href="#register" class="btn btn-primary">Register Now &#8594;</a>
+    <a href="about.html" class="btn btn-outline">Learn More</a>
+  </div>
+</header>
+
+<!-- Countdown -->
+<section class="section" style="padding-top: 0;">
+  <div class="countdown-wrapper reveal" id="countdown">
+    <!-- Populated by JS -->
+  </div>
+
+  <!-- University row -->
+  <div class="university-row reveal" style="margin-bottom: 4rem;">
+    <div class="uni-badge">
+      <div class="uni-shield">JHU</div>
+      <span class="uni-name">Johns Hopkins<br>University</span>
+    </div>
+    <div style="font-family: var(--font-mono); color: var(--text-muted); font-size: 0.8rem;">&times;</div>
+    <div class="uni-badge">
+      <div class="uni-shield">GU</div>
+      <span class="uni-name">Georgetown<br>University</span>
+    </div>
+    <div style="font-family: var(--font-mono); color: var(--text-muted); font-size: 0.8rem;">&times;</div>
+    <div class="uni-badge">
+      <div class="uni-shield">GW</div>
+      <span class="uni-name">George Washington<br>University</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row reveal">
+    <div class="stat">
+      <div class="stat-value" data-count="200" data-suffix="+">0</div>
+      <div class="stat-label">Participants</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" data-count="24">0</div>
+      <div class="stat-label">Hours</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" data-count="3">0</div>
+      <div class="stat-label">Universities</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" data-prefix="$" data-count="10" data-suffix="K+">0</div>
+      <div class="stat-label">In Prizes</div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Compete -->
+<section class="section">
+  <div class="reveal">
+    <span class="section-label">Why Compete</span>
+    <h2 class="section-title">Build What Matters</h2>
+    <p class="section-subtitle">
+      Work on real-world national security challenges alongside peers
+      from three of DC's top universities.
+    </p>
+  </div>
+  <div class="why-grid stagger-children">
+    <div class="card why-card">
+      <div class="why-icon">&#9881;</div>
+      <h3>Real Problems</h3>
+      <p>Tackle challenge tracks designed with input from defense and intelligence professionals. Build tools that could actually be deployed.</p>
+    </div>
+    <div class="card why-card">
+      <div class="why-icon">&#9733;</div>
+      <h3>Top Mentors</h3>
+      <p>Get guidance from engineers and leaders at defense tech companies, national security agencies, and top AI labs.</p>
+    </div>
+    <div class="card why-card">
+      <div class="why-icon">&#9889;</div>
+      <h3>API Access</h3>
+      <p>Sponsored API credits from OpenAI and other partners. Build with cutting-edge models and tools at no cost.</p>
+    </div>
+    <div class="card why-card">
+      <div class="why-icon">&#127942;</div>
+      <h3>Prizes & Recruiting</h3>
+      <p>Compete for cash prizes and get direct exposure to hiring teams at leading defense technology companies.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sponsors strip -->
+<section class="section" style="padding-top: 0;">
+  <div class="reveal">
+    <span class="section-label">Backed By</span>
+  </div>
+  <div class="partners-strip">
+    <span>OpenAI</span>
+    <span>&middot;</span>
+    <span>More Partners TBA</span>
+  </div>
+  <div style="text-align: center; margin-top: 1rem;">
+    <a href="sponsors.html" class="btn btn-ghost">View All Sponsors &#8594;</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" id="register">
+  <div class="cta-banner reveal">
+    <h2>Ready to Build the Future of National Security?</h2>
+    <p>Applications are open for students at JHU, Georgetown, and GW. Space is limited.</p>
+    <a href="#" class="btn btn-primary">Apply Now &#8594;</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-text">&copy; 2026 National Security Hackathon &mdash; Washington, DC</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

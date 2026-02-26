@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsors | DC National Security Hackathon 2026</title>
+  <meta name="description" content="Our sponsors and partners powering the DC National Security Hackathon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .sponsor-cta-section {
+      text-align: center;
+      padding: 4rem 2rem;
+      border: 1px dashed var(--border);
+      margin-top: 2rem;
+    }
+    .sponsor-cta-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .sponsor-cta-section p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sponsor-perks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .perk-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .perk-card h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .perk-card p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-bar"></div></div>
+<canvas id="particles-canvas"></canvas>
+<div class="grid-bg"></div>
+<div class="scan-line"></div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">NS</div>
+    <span>NatSec Hack</span>
+  </a>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sponsors.html" class="active">Sponsors</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="index.html#register" class="nav-cta">Register</a></li>
+  </ul>
+</nav>
+
+<!-- Header -->
+<header class="hero" style="min-height: 45vh; padding-bottom: 2rem;">
+  <div class="hero-overline">Our Partners</div>
+  <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 4rem);">
+    Sponsors &<br><span class="highlight">Partners</span>
+  </h1>
+  <p class="hero-sub">
+    The organizations making this hackathon possible. Providing funding,
+    API access, mentorship, and real-world problem sets.
+  </p>
+</header>
+
+<!-- Title Sponsors -->
+<section class="section">
+  <div class="sponsor-tier reveal">
+    <div class="sponsor-tier-label">Title Sponsor</div>
+    <div class="sponsor-grid tier-title stagger-children">
+      <div class="sponsor-card title-sponsor">
+        <div class="sponsor-name">OpenAI</div>
+        <div class="sponsor-type">API Credits &amp; Mentorship</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Partner Sponsors -->
+  <div class="sponsor-tier reveal">
+    <div class="sponsor-tier-label">Partner Sponsors &mdash; Pending</div>
+    <div class="sponsor-grid tier-partner stagger-children">
+      <div class="sponsor-card">
+        <div class="sponsor-name" style="color: var(--text-muted);">TBA</div>
+        <div class="sponsor-type">Partner Pending</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-name" style="color: var(--text-muted);">TBA</div>
+        <div class="sponsor-type">Partner Pending</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-name" style="color: var(--text-muted);">TBA</div>
+        <div class="sponsor-type">Partner Pending</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supporting -->
+  <div class="sponsor-tier reveal">
+    <div class="sponsor-tier-label">Supporting Sponsors &mdash; Pending</div>
+    <div class="sponsor-grid tier-supporting stagger-children">
+      <div class="sponsor-card">
+        <div class="sponsor-name" style="color: var(--text-muted); font-size: 1rem;">TBA</div>
+        <div class="sponsor-type">Pending</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-name" style="color: var(--text-muted); font-size: 1rem;">TBA</div>
+        <div class="sponsor-type">Pending</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-name" style="color: var(--text-muted); font-size: 1rem;">TBA</div>
+        <div class="sponsor-type">Pending</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-name" style="color: var(--text-muted); font-size: 1rem;">TBA</div>
+        <div class="sponsor-type">Pending</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- University Partners -->
+  <div class="sponsor-tier reveal">
+    <div class="sponsor-tier-label">University Partners</div>
+    <div class="university-row" style="margin-top: 2rem;">
+      <div class="uni-badge">
+        <div class="uni-shield">JHU</div>
+        <span class="uni-name">Johns Hopkins<br>University</span>
+      </div>
+      <div class="uni-badge">
+        <div class="uni-shield">GU</div>
+        <span class="uni-name">Georgetown<br>University</span>
+      </div>
+      <div class="uni-badge">
+        <div class="uni-shield">GW</div>
+        <span class="uni-name">George Washington<br>University</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Become a Sponsor -->
+<section class="section">
+  <div class="reveal">
+    <span class="section-label">Get Involved</span>
+    <h2 class="section-title">Become a Sponsor</h2>
+    <p class="section-subtitle">
+      Put your brand in front of the next generation of national security technologists.
+    </p>
+  </div>
+  <div class="sponsor-perks stagger-children">
+    <div class="perk-card">
+      <h4>Brand Visibility</h4>
+      <p>Logo on all materials, website, and event signage. Direct access to 200+ top students.</p>
+    </div>
+    <div class="perk-card">
+      <h4>Recruiting Pipeline</h4>
+      <p>Meet and recruit from a curated pool of technical talent interested in national security.</p>
+    </div>
+    <div class="perk-card">
+      <h4>Challenge Track</h4>
+      <p>Design a custom challenge track. See teams build prototypes using your APIs or data.</p>
+    </div>
+    <div class="perk-card">
+      <h4>Mentorship Slots</h4>
+      <p>Send engineers as mentors. Build relationships with participants firsthand.</p>
+    </div>
+  </div>
+
+  <div class="sponsor-cta-section reveal" style="margin-top: 3rem;">
+    <h3>Interested?</h3>
+    <p>Reach out to discuss sponsorship tiers and custom packages.</p>
+    <a href="mailto:sponsor@natsechack.org" class="btn btn-primary">Contact Us &#8594;</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-text">&copy; 2026 National Security Hackathon &mdash; Washington, DC</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

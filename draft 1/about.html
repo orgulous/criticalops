@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | DC National Security Hackathon 2026</title>
+  <meta name="description" content="Challenge tracks, schedule, and details for the DC National Security Hackathon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-bar"></div></div>
+<canvas id="particles-canvas"></canvas>
+<div class="grid-bg"></div>
+<div class="scan-line"></div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">NS</div>
+    <span>NatSec Hack</span>
+  </a>
+  <div class="nav-toggle"><span></span><span></span><span></span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="index.html#register" class="nav-cta">Register</a></li>
+  </ul>
+</nav>
+
+<!-- Page Header -->
+<header class="hero" style="min-height: 50vh; padding-bottom: 2rem;">
+  <div class="hero-overline">About the Event</div>
+  <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 4rem);">
+    24 Hours.<br><span class="highlight">One Mission.</span>
+  </h1>
+  <p class="hero-sub">
+    The National Security Hackathon brings together students from Johns Hopkins,
+    Georgetown, and George Washington University to build technology solutions
+    for America's most pressing security challenges.
+  </p>
+</header>
+
+<!-- Mission -->
+<section class="section">
+  <div class="reveal">
+    <span class="section-label">Mission</span>
+    <h2 class="section-title">Why This Exists</h2>
+  </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;" class="reveal">
+    <div>
+      <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+        The United States faces an unprecedented array of technology-driven national
+        security threats. From adversarial AI to cyber warfare, from supply chain
+        vulnerabilities to space domain awareness &mdash; the challenges are growing
+        faster than the workforce to address them.
+      </p>
+      <p style="color: var(--text-secondary); line-height: 1.8;">
+        This hackathon exists to bridge that gap. We bring together the next generation
+        of engineers, policy thinkers, and entrepreneurs from DC's top universities
+        to prototype solutions that matter.
+      </p>
+    </div>
+    <div>
+      <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+        Inspired by the growing defense tech movement and events like the HBS-MIT
+        National Security Conference, we believe that building &mdash; not just
+        discussing &mdash; is the fastest path to impact.
+      </p>
+      <p style="color: var(--text-secondary); line-height: 1.8;">
+        Whether you're a CS major, an IR student, or a policy wonk who can code,
+        there's a place for you here. The best national security solutions come
+        from interdisciplinary teams.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Challenge Tracks -->
+<section class="section">
+  <div class="reveal">
+    <span class="section-label">Challenge Tracks</span>
+    <h2 class="section-title">Choose Your Mission</h2>
+    <p class="section-subtitle">
+      Each track is designed around a real capability gap. Build a prototype
+      that addresses one of these domains.
+    </p>
+  </div>
+  <div class="tracks-grid stagger-children" style="margin-top: 2rem;">
+    <div class="track-card">
+      <div class="track-number">Track 01</div>
+      <h3 class="track-title">AI for Intelligence Analysis</h3>
+      <p class="track-desc">
+        Build tools that help analysts process, synthesize, and extract insights
+        from large volumes of open-source intelligence data. Think smarter OSINT,
+        automated threat assessment, or multi-source fusion.
+      </p>
+      <div class="track-tags">
+        <span class="tag tag-accent">NLP</span>
+        <span class="tag tag-accent">OSINT</span>
+        <span class="tag tag-accent">LLMs</span>
+      </div>
+    </div>
+    <div class="track-card">
+      <div class="track-number">Track 02</div>
+      <h3 class="track-title">Cyber Defense & Resilience</h3>
+      <p class="track-desc">
+        Create tools for detecting, responding to, or recovering from cyber attacks
+        on critical infrastructure. Automated incident response, anomaly detection,
+        or network hardening solutions.
+      </p>
+      <div class="track-tags">
+        <span class="tag tag-accent">Security</span>
+        <span class="tag tag-accent">Networks</span>
+        <span class="tag tag-accent">Automation</span>
+      </div>
+    </div>
+    <div class="track-card">
+      <div class="track-number">Track 03</div>
+      <h3 class="track-title">Supply Chain Security</h3>
+      <p class="track-desc">
+        Develop solutions for mapping, monitoring, or securing critical supply chains.
+        Hardware provenance, software bill of materials analysis, or dependency
+        risk scoring.
+      </p>
+      <div class="track-tags">
+        <span class="tag tag-accent">Data</span>
+        <span class="tag tag-accent">Logistics</span>
+        <span class="tag tag-accent">Risk</span>
+      </div>
+    </div>
+    <div class="track-card">
+      <div class="track-number">Track 04</div>
+      <h3 class="track-title">Open Track</h3>
+      <p class="track-desc">
+        Have a national security-relevant idea that doesn't fit the other tracks?
+        Pitch it. The best ideas often come from unexpected angles. Convince the
+        judges your solution matters.
+      </p>
+      <div class="track-tags">
+        <span class="tag tag-accent">Wildcard</span>
+        <span class="tag tag-accent">Innovation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule -->
+<section class="section">
+  <div class="reveal">
+    <span class="section-label">Schedule</span>
+    <h2 class="section-title">April 17, 2026</h2>
+    <p class="section-subtitle">A single day of building, learning, and competing.</p>
+  </div>
+  <div class="timeline reveal" style="margin-top: 3rem; max-width: 600px;">
+    <div class="timeline-item">
+      <div class="timeline-time">08:00 AM</div>
+      <div class="timeline-title">Check-In & Breakfast</div>
+      <div class="timeline-desc">Badge pickup, team formation, fuel up.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">09:00 AM</div>
+      <div class="timeline-title">Opening Ceremony</div>
+      <div class="timeline-desc">Keynote speaker, track briefings, rules of engagement.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">10:00 AM</div>
+      <div class="timeline-title">Hacking Begins</div>
+      <div class="timeline-desc">Teams start building. Mentors available on the floor.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">12:30 PM</div>
+      <div class="timeline-title">Lunch & Lightning Talks</div>
+      <div class="timeline-desc">Sponsored lunch with short talks from industry leaders.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">06:00 PM</div>
+      <div class="timeline-title">Dinner & Checkpoint</div>
+      <div class="timeline-desc">Team check-ins, mentor office hours, dinner.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">09:00 PM</div>
+      <div class="timeline-title">Submissions Due</div>
+      <div class="timeline-desc">Code freeze. Submit your project and demo deck.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">09:30 PM</div>
+      <div class="timeline-title">Demo & Judging</div>
+      <div class="timeline-desc">Top teams present to judges panel. Live demos encouraged.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">11:00 PM</div>
+      <div class="timeline-title">Awards & Closing</div>
+      <div class="timeline-desc">Winners announced. Networking reception.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="reveal">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Questions</h2>
+  </div>
+  <div class="faq-list reveal" style="margin-top: 2rem;">
+    <div class="faq-item">
+      <div class="faq-question">Who can participate?</div>
+      <div class="faq-answer">
+        <p>Currently enrolled students at Johns Hopkins University, Georgetown University, and George Washington University. All majors and degree levels welcome &mdash; we need engineers, policy experts, designers, and domain specialists.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do I need a team?</div>
+      <div class="faq-answer">
+        <p>You can register as an individual or with a team of up to 4. We'll have team formation activities at the start for individuals. Cross-university teams are encouraged.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What should I bring?</div>
+      <div class="faq-answer">
+        <p>Your laptop, charger, and any hardware you want to hack with. We provide WiFi, power, food, drinks, and API credits. A government ID for check-in.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do I need security clearance?</div>
+      <div class="faq-answer">
+        <p>No. All challenge tracks use unclassified, publicly available data and open-source tools. No clearance required.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Is it free?</div>
+      <div class="faq-answer">
+        <p>Yes. Registration, food, swag, and API credits are all free thanks to our sponsors.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What about intellectual property?</div>
+      <div class="faq-answer">
+        <p>You own everything you build. We encourage open-sourcing your projects but it's not required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="cta-banner reveal">
+    <h2>Convinced? Let's Go.</h2>
+    <p>Applications close when spots fill up. Don't wait.</p>
+    <a href="index.html#register" class="btn btn-primary">Apply Now &#8594;</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-text">&copy; 2026 National Security Hackathon &mdash; Washington, DC</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
