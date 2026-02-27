@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DC National Security Hackathon 2026</title>
-  <meta name="description" content="The premier defense tech hackathon. April 17, 2026. Washington, DC. JHU x Georgetown x GW.">
+  <title>Critical Ops | DC National Security Hackathon 2026</title>
+  <meta name="description" content="The DC area's premier defense technology hackathon. April 17–19, 2026. Washington, DC.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -45,16 +45,16 @@
       gap: 3rem;
       flex-wrap: wrap;
       padding: 2rem 0;
-      opacity: 0.5;
-      transition: opacity var(--transition-base);
     }
-    .partners-strip:hover { opacity: 0.8; }
     .partners-strip span {
       font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--text-muted);
+      font-size: 0.7rem;
+      color: var(--text-secondary);
       text-transform: uppercase;
       letter-spacing: 0.15em;
+    }
+    .partners-strip span.sep {
+      color: var(--text-muted);
     }
     .why-grid {
       display: grid;
@@ -92,8 +92,8 @@
 <!-- Navigation -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">
-    <div class="logo-icon">NS</div>
-    <span>NatSec Hack</span>
+    <img src="logo.png" alt="Critical Ops" class="nav-logo-img">
+    <span>Critical Ops</span>
   </a>
   <div class="nav-toggle">
     <span></span><span></span><span></span>
@@ -102,37 +102,35 @@
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="sponsors.html">Sponsors</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="#register" class="nav-cta">Register</a></li>
+    <li><a href="https://luma.com/lrdbe2s6" target="_blank" class="nav-cta">Register</a></li>
   </ul>
 </nav>
 
 <!-- Hero -->
 <header class="hero">
   <div class="corner-frame"></div>
-  <div class="hero-overline">April 17, 2026 &mdash; Washington, DC</div>
+  <div class="hero-overline">April 17&ndash;19, 2026 &mdash; Washington, DC</div>
   <h1 class="hero-title">
-    <span class="glitch" data-text="National Security">National Security</span><br>
+    <span class="glitch" data-text="Critical Ops">Critical Ops</span><br>
     <span class="highlight">Hackathon</span>
   </h1>
   <p class="hero-sub">
     The DC area's premier defense technology hackathon.
-    Students from JHU, Georgetown, and GW come together to build
-    solutions for tomorrow's national security challenges.
+    Come build solutions for tomorrow's national security challenges.
   </p>
   <div class="hero-meta">
     <div class="hero-meta-item">
       <span class="icon">&#9670;</span> Washington, DC
     </div>
     <div class="hero-meta-item">
-      <span class="icon">&#9670;</span> April 17, 2026
+      <span class="icon">&#9670;</span> April 17&ndash;19, 2026
     </div>
     <div class="hero-meta-item">
-      <span class="icon">&#9670;</span> 24 Hours
+      <span class="icon">&#9670;</span> 36 Hours
     </div>
   </div>
   <div class="hero-actions">
-    <a href="#register" class="btn btn-primary">Register Now &#8594;</a>
+    <a href="https://luma.com/lrdbe2s6" target="_blank" class="btn btn-primary">Register Now &#8594;</a>
     <a href="about.html" class="btn btn-outline">Learn More</a>
   </div>
 </header>
@@ -144,19 +142,22 @@
   </div>
 
   <!-- University row -->
+  <div class="reveal" style="text-align: center; margin-bottom: 1rem;">
+    <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.15em;">Organized by students at</span>
+  </div>
   <div class="university-row reveal" style="margin-bottom: 4rem;">
     <div class="uni-badge">
-      <div class="uni-shield">JHU</div>
+      <div class="uni-shield" style="background:#002D72; border-color:#68ACE5; color:#fff;">JHU</div>
       <span class="uni-name">Johns Hopkins<br>University</span>
     </div>
     <div style="font-family: var(--font-mono); color: var(--text-muted); font-size: 0.8rem;">&times;</div>
     <div class="uni-badge">
-      <div class="uni-shield">GU</div>
+      <div class="uni-shield" style="background:#041E42; border-color:#6E8DBF; color:#fff;">GU</div>
       <span class="uni-name">Georgetown<br>University</span>
     </div>
     <div style="font-family: var(--font-mono); color: var(--text-muted); font-size: 0.8rem;">&times;</div>
     <div class="uni-badge">
-      <div class="uni-shield">GW</div>
+      <div class="uni-shield" style="background:#033C5A; border-color:#FFC72C; color:#FFC72C;">GW</div>
       <span class="uni-name">George Washington<br>University</span>
     </div>
   </div>
@@ -164,11 +165,11 @@
   <!-- Stats -->
   <div class="stats-row reveal">
     <div class="stat">
-      <div class="stat-value" data-count="200" data-suffix="+">0</div>
+      <div class="stat-value" data-count="150" data-suffix="+">0</div>
       <div class="stat-label">Participants</div>
     </div>
     <div class="stat">
-      <div class="stat-value" data-count="24">0</div>
+      <div class="stat-value" data-count="36">0</div>
       <div class="stat-label">Hours</div>
     </div>
     <div class="stat">
@@ -176,7 +177,7 @@
       <div class="stat-label">Universities</div>
     </div>
     <div class="stat">
-      <div class="stat-value" data-prefix="$" data-count="10" data-suffix="K+">0</div>
+      <div class="stat-value" style="font-size: clamp(1.5rem, 3vw, 2.5rem);">TBA</div>
       <div class="stat-label">In Prizes</div>
     </div>
   </div>
@@ -223,8 +224,18 @@
   </div>
   <div class="partners-strip">
     <span>OpenAI</span>
-    <span>&middot;</span>
-    <span>More Partners TBA</span>
+    <span class="sep">&middot;</span>
+    <span>Cursor</span>
+    <span class="sep">&middot;</span>
+    <span>Common Mission Project</span>
+    <span class="sep">&middot;</span>
+    <span>Squadra Ventures</span>
+    <span class="sep">&middot;</span>
+    <span>VCinDC</span>
+    <span class="sep">&middot;</span>
+    <span>The AI Collective</span>
+    <span class="sep">&middot;</span>
+    <span>More TBA</span>
   </div>
   <div style="text-align: center; margin-top: 1rem;">
     <a href="sponsors.html" class="btn btn-ghost">View All Sponsors &#8594;</a>
@@ -235,20 +246,19 @@
 <section class="section" id="register">
   <div class="cta-banner reveal">
     <h2>Ready to Build the Future of National Security?</h2>
-    <p>Applications are open for students at JHU, Georgetown, and GW. Space is limited.</p>
-    <a href="#" class="btn btn-primary">Apply Now &#8594;</a>
+    <p>Applications are open for cracked builders in the DC area. Space is limited.</p>
+    <a href="https://luma.com/lrdbe2s6" target="_blank" class="btn btn-primary">Apply Now &#8594;</a>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-inner">
-    <span class="footer-text">&copy; 2026 National Security Hackathon &mdash; Washington, DC</span>
+    <span class="footer-text">&copy; 2026 Critical Ops &mdash; Washington, DC</span>
     <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="team.html">Team</a></li>
     </ul>
   </div>
 </footer>

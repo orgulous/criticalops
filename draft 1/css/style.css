@@ -153,6 +153,13 @@ img {
   background: var(--accent);
 }
 
+.nav-logo-img {
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
