@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
+    /* ── Countdown ── */
     .countdown-wrapper {
       display: flex;
       justify-content: center;
@@ -38,43 +39,45 @@
       padding: 0 0.75rem;
       line-height: 1;
     }
-    .partners-strip {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-      padding: 2rem 0;
-    }
-    .partners-strip span {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-    }
-    .partners-strip span.sep {
-      color: var(--text-muted);
-    }
+    /* ── Why grid ── */
     .why-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
     }
-    .why-card .why-icon {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
+    .why-card .why-icon { font-size: 1.75rem; margin-bottom: 1rem; }
+    .why-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .why-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; }
+    /* ── Sponsors page styles ── */
+    .sponsor-cta-section {
+      text-align: center;
+      padding: 4rem 2rem;
+      border: 1px dashed var(--border);
+      margin-top: 2rem;
     }
-    .why-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-    .why-card p {
-      font-size: 0.85rem;
+    .sponsor-cta-section h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .sponsor-cta-section p {
       color: var(--text-secondary);
-      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
+    .sponsor-perks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .perk-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .perk-card h4 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .perk-card p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -91,7 +94,7 @@
 
 <!-- Navigation -->
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
+  <a href="#" class="nav-logo">
     <img src="logo.png" alt="Critical Ops" class="nav-logo-img">
     <span>Critical Ops</span>
   </a>
@@ -99,14 +102,17 @@
     <span></span><span></span><span></span>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="https://luma.com/lrdbe2s6" target="_blank" class="nav-cta">Register</a></li>
   </ul>
 </nav>
 
-<!-- Hero -->
+<!-- ═══════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
 <header class="hero">
   <div class="corner-frame"></div>
   <div class="hero-overline">April 17&ndash;19, 2026 &mdash; Washington, DC</div>
@@ -131,11 +137,13 @@
   </div>
   <div class="hero-actions">
     <a href="https://luma.com/lrdbe2s6" target="_blank" class="btn btn-primary">Register Now &#8594;</a>
-    <a href="about.html" class="btn btn-outline">Learn More</a>
+    <a href="#about" class="btn btn-outline">Learn More</a>
   </div>
 </header>
 
-<!-- Countdown -->
+<!-- ═══════════════════════════════════════════════════
+     COUNTDOWN + STATS
+════════════════════════════════════════════════════ -->
 <section class="section" style="padding-top: 0;">
   <div class="countdown-wrapper reveal" id="countdown">
     <!-- Populated by JS -->
@@ -183,66 +191,350 @@
   </div>
 </section>
 
-<!-- Why Compete -->
-<section class="section">
+<!-- ═══════════════════════════════════════════════════
+     SPONSORS  (right below countdown)
+════════════════════════════════════════════════════ -->
+<div id="sponsors">
+
+  <section class="section">
+    <div class="reveal">
+      <span class="section-label">Backed By</span>
+      <h2 class="section-title">Sponsors &amp; <span class="highlight">Partners</span></h2>
+      <p class="section-subtitle">
+        The organizations making this hackathon possible. Providing funding,
+        API access, mentorship, and real-world problem sets.
+      </p>
+    </div>
+
+    <!-- Technology Sponsors -->
+    <div class="sponsor-tier reveal" style="margin-top: 2rem;">
+      <div class="sponsor-tier-label">Technology Sponsors</div>
+      <div class="sponsor-grid tier-partner stagger-children">
+        <div class="sponsor-card title-sponsor">
+          <div class="sponsor-name">OpenAI</div>
+          <div class="sponsor-type">API Credits &amp; Mentorship</div>
+        </div>
+        <div class="sponsor-card title-sponsor">
+          <div class="sponsor-name">Cursor</div>
+          <div class="sponsor-type">Technology Sponsor</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partners -->
+    <div class="sponsor-tier reveal">
+      <div class="sponsor-tier-label">Partners</div>
+      <div class="sponsor-grid tier-partner stagger-children">
+        <div class="sponsor-card">
+          <div class="sponsor-name">In-Q-Tel</div>
+          <div class="sponsor-type">Partner</div>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-name">NobleReach</div>
+          <div class="sponsor-type">Partner</div>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-name">Common Mission Project</div>
+          <div class="sponsor-type">Partner</div>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-name">Squadra Ventures</div>
+          <div class="sponsor-type">Partner</div>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-name">VCinDC</div>
+          <div class="sponsor-type">Partner</div>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-name">The AI Collective</div>
+          <div class="sponsor-type">Partner</div>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-name" style="color: var(--text-muted);">More TBA</div>
+          <div class="sponsor-type">Pending</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Organizing Clubs -->
+    <div class="sponsor-tier reveal">
+      <div class="sponsor-tier-label">Organized By</div>
+      <div class="sponsor-grid tier-partner stagger-children">
+        <div class="sponsor-card">
+          <div class="sponsor-name" style="font-size: 1rem;">Georgetown McDonough<br>Military Association</div>
+          <div class="sponsor-type">Georgetown University</div>
+        </div>
+        <div class="sponsor-card">
+          <div class="sponsor-name" style="font-size: 1rem;">Georgetown Entrepreneurship<br>&amp; Venture Capital Club</div>
+          <div class="sponsor-type">Georgetown University</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Become a Sponsor -->
+  <section class="section">
+    <div class="reveal">
+      <span class="section-label">Get Involved</span>
+      <h2 class="section-title">Become a Sponsor</h2>
+      <p class="section-subtitle">
+        Put your brand in front of the next generation of national security technologists.
+      </p>
+    </div>
+    <div class="sponsor-perks stagger-children">
+      <div class="perk-card">
+        <h4>Brand Visibility</h4>
+        <p>Logo on all materials, website, and event signage. Direct access to 200+ top students.</p>
+      </div>
+      <div class="perk-card">
+        <h4>Recruiting Pipeline</h4>
+        <p>Meet and recruit from a curated pool of technical talent interested in national security.</p>
+      </div>
+      <div class="perk-card">
+        <h4>Challenge Track</h4>
+        <p>Design a custom challenge track. See teams build prototypes using your APIs or data.</p>
+      </div>
+      <div class="perk-card">
+        <h4>Mentorship Slots</h4>
+        <p>Send engineers as mentors. Build relationships with participants firsthand.</p>
+      </div>
+    </div>
+    <div class="sponsor-cta-section reveal" style="margin-top: 3rem;">
+      <h3>Interested?</h3>
+      <p>Reach out to discuss sponsorship tiers and custom packages.</p>
+      <a href="mailto:sk2426@georgetown.edu" class="btn btn-primary">Contact Us &#8594;</a>
+    </div>
+  </section>
+
+</div><!-- /#sponsors -->
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════ -->
+<div id="about">
+
+  <!-- About + Why Compete (merged) -->
+  <section class="section">
+    <div class="reveal">
+      <span class="section-label">About the Event</span>
+      <h2 class="section-title">36 Hours. <span class="highlight">One Mission.</span></h2>
+      <p class="section-subtitle">
+        The Critical Ops Hackathon brings together the DC area national security community
+        to build technology-oriented solutions for America's most pressing security challenges.
+      </p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;" class="reveal">
+      <div>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+          The United States faces an unprecedented array of technology-driven national
+          security threats. From adversarial AI to cyber warfare, from supply chain
+          vulnerabilities to space domain awareness &mdash; the challenges are growing
+          faster than the workforce to address them.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.8;">
+          This hackathon exists to bridge that gap. We bring together the next generation
+          of engineers, policy thinkers, and entrepreneurs from DC's top universities
+          to prototype solutions that matter.
+        </p>
+      </div>
+      <div>
+        <p style="color: var(--text-secondary); line-height: 1.8;">
+          Whether you're a software engineer, policy expert, or an operator who can code,
+          there's a place for you here. The best national security solutions come
+          from interdisciplinary teams that understand both the technology and the mission.
+        </p>
+      </div>
+    </div>
+    <div class="why-grid stagger-children" style="margin-top: 3rem;">
+      <div class="card why-card">
+        <div class="why-icon">&#9881;</div>
+        <h3>Real Problems</h3>
+        <p>Tackle challenge tracks designed with input from defense and intelligence professionals. Build tools that could actually be deployed.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">&#9733;</div>
+        <h3>Top Mentors</h3>
+        <p>Get guidance from engineers and leaders at defense tech companies, national security agencies, and top AI labs.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">&#9889;</div>
+        <h3>API Access</h3>
+        <p>Sponsored API credits from OpenAI and other partners. Build with cutting-edge models and tools at no cost.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">&#127942;</div>
+        <h3>Prizes &amp; Recruiting</h3>
+        <p>Compete for cash prizes and get direct exposure to hiring teams at leading defense technology companies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenge Tracks -->
+  <section class="section">
+    <div class="reveal">
+      <span class="section-label">Challenge Tracks</span>
+      <h2 class="section-title">Choose Your Mission</h2>
+      <p class="section-subtitle">
+        Each track is designed around a real capability gap. Build a prototype
+        that addresses one of these domains.
+      </p>
+    </div>
+    <div class="tracks-grid stagger-children" style="margin-top: 2rem;">
+      <div class="track-card">
+        <div class="track-number">Track 01</div>
+        <h3 class="track-title">Autonomy</h3>
+        <p class="track-desc">
+          Build autonomous systems and decision-support tools for contested environments.
+          Unmanned systems coordination, human-machine teaming, or autonomous ISR platforms.
+        </p>
+        <div class="track-tags">
+          <span class="tag tag-accent">Robotics</span>
+          <span class="tag tag-accent">Decision Systems</span>
+          <span class="tag tag-accent">ISR</span>
+        </div>
+      </div>
+      <div class="track-card">
+        <div class="track-number">Track 02</div>
+        <h3 class="track-title">Contested Logistics</h3>
+        <p class="track-desc">
+          Develop solutions for sustaining operations under degraded conditions.
+          Resilient supply chains, predictive maintenance, distributed resource allocation,
+          or last-mile delivery in denied environments.
+        </p>
+        <div class="track-tags">
+          <span class="tag tag-accent">Logistics</span>
+          <span class="tag tag-accent">Resilience</span>
+          <span class="tag tag-accent">Optimization</span>
+        </div>
+      </div>
+      <div class="track-card">
+        <div class="track-number">Track 03</div>
+        <h3 class="track-title">Biotechnology</h3>
+        <p class="track-desc">
+          Address biological threats and opportunities at the national security frontier.
+          Biosurveillance, detection tools, medical countermeasures, or biosecurity
+          risk assessment platforms.
+        </p>
+        <div class="track-tags">
+          <span class="tag tag-accent">Biosecurity</span>
+          <span class="tag tag-accent">Detection</span>
+          <span class="tag tag-accent">Surveillance</span>
+        </div>
+      </div>
+      <div class="track-card">
+        <div class="track-number">Track 04</div>
+        <h3 class="track-title">Cybersecurity</h3>
+        <p class="track-desc">
+          Defend critical infrastructure against sophisticated adversaries.
+          Automated threat detection, zero-trust architectures, incident response tools,
+          or offensive security capabilities for red teaming.
+        </p>
+        <div class="track-tags">
+          <span class="tag tag-accent">Cyber</span>
+          <span class="tag tag-accent">Defense</span>
+          <span class="tag tag-accent">Infrastructure</span>
+        </div>
+      </div>
+      <div class="track-card">
+        <div class="track-number">Track 05</div>
+        <h3 class="track-title">AI &mdash; Generalist Track</h3>
+        <p class="track-desc">
+          Have a national security AI application that doesn't fit the other tracks?
+          Build it here. LLM-powered analysis tools, multimodal intelligence systems,
+          or novel AI applications for the defense community.
+        </p>
+        <div class="track-tags">
+          <span class="tag tag-accent">AI</span>
+          <span class="tag tag-accent">LLMs</span>
+          <span class="tag tag-accent">Open Domain</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="section">
+    <div class="reveal">
+      <span class="section-label">Schedule</span>
+      <h2 class="section-title">April 17&ndash;19, 2026</h2>
+      <p class="section-subtitle">36 hours of building, learning, and competing. Full schedule TBA.</p>
+    </div>
+    <div class="timeline reveal" style="margin-top: 3rem; max-width: 600px;">
+      <div class="timeline-item">
+        <div class="timeline-time">Fri Apr 17</div>
+        <div class="timeline-title">Hackathon Opens</div>
+        <div class="timeline-desc">The hackathon kicks off Friday evening on Georgetown's campus. Meet your fellow participants, sponsors, and mentors. Form teams and get oriented before the build begins.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Sat Apr 18 &mdash; 9am</div>
+        <div class="timeline-title">Build Day</div>
+        <div class="timeline-desc">Full build day underway. Teams are heads down. Mentors available on the floor throughout. Location TBA.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Sat Apr 18</div>
+        <div class="timeline-title">Overnight Build</div>
+        <div class="timeline-desc">Keep building. Mentors remain available overnight to support your team.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Sun Apr 19 &mdash; 11am</div>
+        <div class="timeline-title">Submissions Due</div>
+        <div class="timeline-desc">Code freeze. Submit your project and demo deck.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Sun Apr 19 &mdash; 11am&ndash;2pm</div>
+        <div class="timeline-title">Demo, Judging &amp; Awards</div>
+        <div class="timeline-desc">Top teams present to a panel of judges. Winners announced. Networking to follow.</div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /#about -->
+
+<!-- ═══════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════ -->
+<section class="section" id="faq">
   <div class="reveal">
-    <span class="section-label">Why Compete</span>
-    <h2 class="section-title">Build What Matters</h2>
-    <p class="section-subtitle">
-      Work on real-world national security challenges alongside peers
-      from three of DC's top universities.
-    </p>
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Questions</h2>
   </div>
-  <div class="why-grid stagger-children">
-    <div class="card why-card">
-      <div class="why-icon">&#9881;</div>
-      <h3>Real Problems</h3>
-      <p>Tackle challenge tracks designed with input from defense and intelligence professionals. Build tools that could actually be deployed.</p>
+  <div class="faq-list reveal" style="margin-top: 2rem;">
+    <div class="faq-item">
+      <div class="faq-question">Who can participate?</div>
+      <div class="faq-answer">
+        <p>The event is open to the broader DC area national security community &mdash; professionals, researchers, and students alike. We especially encourage participation from builders across the DC metro area. All backgrounds welcome: engineers, policy experts, operators, and domain specialists.</p>
+      </div>
     </div>
-    <div class="card why-card">
-      <div class="why-icon">&#9733;</div>
-      <h3>Top Mentors</h3>
-      <p>Get guidance from engineers and leaders at defense tech companies, national security agencies, and top AI labs.</p>
+    <div class="faq-item">
+      <div class="faq-question">Do I need a team?</div>
+      <div class="faq-answer">
+        <p>You can register as an individual or with a team of up to 4. We'll have team formation activities at the start for individuals. Cross-university teams are encouraged.</p>
+      </div>
     </div>
-    <div class="card why-card">
-      <div class="why-icon">&#9889;</div>
-      <h3>API Access</h3>
-      <p>Sponsored API credits from OpenAI and other partners. Build with cutting-edge models and tools at no cost.</p>
+    <div class="faq-item">
+      <div class="faq-question">What should I bring?</div>
+      <div class="faq-answer">
+        <p>Your laptop, charger, and any hardware you want to hack with. A government ID for check-in.</p>
+      </div>
     </div>
-    <div class="card why-card">
-      <div class="why-icon">&#127942;</div>
-      <h3>Prizes & Recruiting</h3>
-      <p>Compete for cash prizes and get direct exposure to hiring teams at leading defense technology companies.</p>
+    <div class="faq-item">
+      <div class="faq-question">Is it free?</div>
+      <div class="faq-answer">
+        <p>Yes. Registration and API credits are free thanks to our sponsors.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What about intellectual property?</div>
+      <div class="faq-answer">
+        <p>You own everything you build. All projects will be open-sourced and posted publicly on GitHub at the end of the hackathon.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Sponsors strip -->
-<section class="section" style="padding-top: 0;">
-  <div class="reveal">
-    <span class="section-label">Backed By</span>
-  </div>
-  <div class="partners-strip">
-    <span>OpenAI</span>
-    <span class="sep">&middot;</span>
-    <span>Cursor</span>
-    <span class="sep">&middot;</span>
-    <span>Common Mission Project</span>
-    <span class="sep">&middot;</span>
-    <span>Squadra Ventures</span>
-    <span class="sep">&middot;</span>
-    <span>VCinDC</span>
-    <span class="sep">&middot;</span>
-    <span>The AI Collective</span>
-    <span class="sep">&middot;</span>
-    <span>More TBA</span>
-  </div>
-  <div style="text-align: center; margin-top: 1rem;">
-    <a href="sponsors.html" class="btn btn-ghost">View All Sponsors &#8594;</a>
-  </div>
-</section>
-
-<!-- CTA -->
+<!-- ═══════════════════════════════════════════════════
+     CTA
+════════════════════════════════════════════════════ -->
 <section class="section" id="register">
   <div class="cta-banner reveal">
     <h2>Ready to Build the Future of National Security?</h2>
@@ -256,9 +548,10 @@
   <div class="footer-inner">
     <span class="footer-text">&copy; 2026 Critical Ops &mdash; Washington, DC</span>
     <ul class="footer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#sponsors">Sponsors</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
   </div>
 </footer>

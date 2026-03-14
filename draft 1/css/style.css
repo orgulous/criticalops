@@ -87,7 +87,7 @@ img {
   background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
   z-index: 1;
   pointer-events: none;
-  animation: scanDown 8s linear infinite;
+  animation: scanDown 25s linear infinite;
 }
 
 @keyframes scanDown {
@@ -250,7 +250,7 @@ img {
 .section {
   position: relative;
   z-index: 2;
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
